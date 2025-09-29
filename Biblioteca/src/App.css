@@ -1,0 +1,359 @@
+/* App.css - Tema oscuro para las páginas */
+
+/* Transición suave para todos los elementos */
+* {
+  transition: background-color 0.5s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Tema oscuro - solo se aplica cuando la clase dark-mode está en el body */
+body.dark-mode {
+  background-color: #212529;
+  color: #ffffff;
+}
+
+/* Contenedores principales en tema oscuro */
+body.dark-mode .container {
+  background-color: #212529;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  border-color: #333;
+  color: #ffffff;
+}
+
+body.dark-mode .card-header {
+  background-color: #2d2d2d !important;
+  border-bottom-color: #333;
+  color: #ffffff;
+}
+
+body.dark-mode .card-body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Tablas en tema oscuro */
+body.dark-mode .table {
+  color: #ffffff;
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .table-striped tbody tr:nth-of-type(odd) {
+  background-color: #2d2d2d;
+}
+
+body.dark-mode .table-hover tbody tr:hover {
+  background-color: #3d3d3d;
+  color: #ffffff;
+}
+
+body.dark-mode .table-dark {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+body.dark-mode .table-dark th {
+  background-color: #333;
+  border-color: #444;
+}
+
+/* Formularios en tema oscuro */
+body.dark-mode .form-control {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: #ffffff;
+}
+
+body.dark-mode .form-control:focus {
+  background-color: #2d2d2d;
+  border-color: #007bff;
+  color: #ffffff;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+body.dark-mode .form-select {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: #ffffff;
+}
+
+body.dark-mode .form-label {
+  color: #ffffff;
+}
+
+body.dark-mode .form-text {
+  color: #cccccc !important;
+}
+
+/* Alertas en tema oscuro */
+body.dark-mode .alert {
+  background-color: #2d2d2d;
+  border-color: #444;
+  color: #ffffff;
+}
+
+body.dark-mode .alert-success {
+  background-color: #1e3a1e;
+  border-color: #2d5a2d;
+  color: #d4edda;
+}
+
+body.dark-mode .alert-danger {
+  background-color: #3a1e1e;
+  border-color: #5a2d2d;
+  color: #f8d7da;
+}
+
+body.dark-mode .alert-warning {
+  background-color: #3a2e1e;
+  border-color: #5a4d2d;
+  color: #fff3cd;
+}
+
+body.dark-mode .alert-info {
+  background-color: #1e2e3a;
+  border-color: #2d4d5a;
+  color: #d1ecf1;
+}
+
+/* Modal en tema oscuro */
+body.dark-mode .modal-content {
+  background-color: #1e1e1e;
+  border-color: #333;
+  color: #ffffff;
+}
+
+body.dark-mode .modal-header {
+  background-color: #2d2d2d;
+  border-bottom-color: #333;
+  color: #ffffff;
+}
+
+body.dark-mode .modal-footer {
+  background-color: #2d2d2d;
+  border-top-color: #333;
+}
+
+body.dark-mode .btn-close {
+  filter: invert(1);
+}
+
+/* Badges en tema oscuro */
+body.dark-mode .badge {
+  color: #ffffff;
+}
+
+/* Textos y enlaces */
+body.dark-mode .text-muted {
+  color: #aaaaaa !important;
+}
+
+body.dark-mode .text-dark {
+  color: #ffffff !important;
+}
+
+body.dark-mode a {
+  color: #4dabf7;
+}
+
+body.dark-mode a:hover {
+  color: #74c0fc;
+}
+
+/* Spinners y elementos de carga */
+body.dark-mode .spinner-border {
+  color: #ffffff;
+}
+
+/* Imágenes - mantener su apariencia normal */
+body.dark-mode img {
+  filter: none !important;
+}
+
+/* Placeholders de inputs */
+body.dark-mode .form-control::placeholder {
+  color: #888;
+}
+
+body.dark-mode .form-control::-webkit-input-placeholder {
+  color: #888;
+}
+
+body.dark-mode .form-control::-moz-placeholder {
+  color: #888;
+}
+
+body.dark-mode .form-control:-ms-input-placeholder {
+  color: #888;
+}
+
+body.dark-mode .form-control::-ms-input-placeholder {
+  color: #888;
+}
+
+/* Select múltiple */
+body.dark-mode select[multiple] option {
+  background-color: #2d2d2d;
+  color: #ffffff;
+}
+
+/* Efectos hover en cards */
+body.dark-mode .card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Border colors */
+body.dark-mode .border-top {
+  border-top-color: #333 !important;
+}
+
+body.dark-mode .border-bottom {
+  border-bottom-color: #333 !important;
+}
+
+body.dark-mode .border {
+  border-color: #333 !important;
+}
+
+/* HR lines */
+body.dark-mode hr {
+  border-top-color: #333;
+  background-color: #333;
+}
+
+/* Shadow effects */
+body.dark-mode .shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark-mode .shadow-sm {
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.3) !important;
+}
+
+body.dark-mode .shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Text colors específicos */
+body.dark-mode .text-black {
+  color: #ffffff !important;
+}
+
+body.dark-mode .text-black-50 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Background colors específicos */
+body.dark-mode .bg-light {
+  background-color: #2d2d2d !important;
+}
+
+body.dark-mode .bg-white {
+  background-color: #1e1e1e !important;
+}
+
+/* Para elementos que podrían tener fondo blanco por defecto */
+body.dark-mode [class*="bg-"]:not(.bg-success):not(.bg-primary):not(.bg-danger):not(.bg-warning):not(.bg-info):not(.bg-dark) {
+  background-color: #2d2d2d !important;
+}
+
+/* Asegurar que los botones mantengan sus colores originales */
+body.dark-mode .btn-success {
+  background-color: #198754 !important;
+  border-color: #198754 !important;
+}
+
+body.dark-mode .btn-primary {
+  background-color: #0d6efd !important;
+  border-color: #0d6efd !important;
+}
+
+body.dark-mode .btn-secondary {
+  background-color: #6c757d !important;
+  border-color: #6c757d !important;
+}
+
+body.dark-mode .btn-danger {
+  background-color: #dc3545 !important;
+  border-color: #dc3545 !important;
+}
+
+body.dark-mode .btn-warning {
+  background-color: #ffc107 !important;
+  border-color: #ffc107 !important;
+  color: #000 !important;
+}
+
+body.dark-mode .btn-info {
+  background-color: #0dcaf0 !important;
+  border-color: #0dcaf0 !important;
+}
+
+/* Botones outline */
+body.dark-mode .btn-outline-primary {
+  color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+body.dark-mode .btn-outline-primary:hover {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+body.dark-mode .btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+}
+
+body.dark-mode .btn-outline-secondary:hover {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+body.dark-mode .btn-outline-success {
+  color: #198754;
+  border-color: #198754;
+}
+
+body.dark-mode .btn-outline-success:hover {
+  background-color: #198754;
+  color: #fff;
+}
+
+body.dark-mode .btn-outline-danger {
+  color: #dc3545;
+  border-color: #dc3545;
+}
+
+body.dark-mode .btn-outline-danger:hover {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+/* Mantener la legibilidad del texto en botones */
+body.dark-mode .btn {
+  color: inherit;
+}
+
+/* Asegurar que los textos en los badges sean legibles */
+body.dark-mode .badge.bg-secondary {
+  background-color: #6c757d !important;
+  color: #fff !important;
+}
+
+body.dark-mode .badge.bg-light {
+  background-color: #444 !important;
+  color: #fff !important;
+}
+
+/* Corrección para inputs deshabilitados */
+body.dark-mode .form-control:disabled {
+  background-color: #333;
+  color: #888;
+}
+
+body.dark-mode .form-select:disabled {
+  background-color: #333;
+  color: #888;
+}
