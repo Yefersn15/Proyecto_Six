@@ -1,4 +1,3 @@
-src/
 # Proyecto Six - Biblioteca Digital
 
 Este proyecto es una plataforma de gestión de biblioteca digital, compuesta por un backend en Node.js/Express (carpeta `Api`) y un frontend en React (carpeta `Biblioteca`). Permite la administración de libros, autores, categorías, préstamos y usuarios, con autenticación y panel de administración.
