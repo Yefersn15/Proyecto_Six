@@ -1,5 +1,4 @@
 const API_URL = "http://localhost:5000/api"; 
-// ⚠️ cuando lo subas a Vercel, cambia esto por la URL del deploy
 
 export async function apiGet(endpoint, token) {
   const res = await fetch(`${API_URL}/${endpoint}`, {
