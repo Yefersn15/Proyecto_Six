@@ -2,19 +2,36 @@
 
 Este directorio contiene el backend del proyecto, desarrollado con Node.js y Express. Aquí se gestionan las operaciones del servidor, la conexión a la base de datos y las rutas de la API.
 
+## Clonar el repositorio
+
+1. Abre una terminal y ejecuta el siguiente comando para clonar el repositorio:
+
+```bash
+git clone <URL_DEL_REPOSITORIO>
+```
+
+2. Navega al directorio `Api`:
+
+```bash
+cd Proyecto_Six/Api
+```
+
 ## Instalación
 
 1. Asegúrate de tener Node.js instalado en tu sistema.
-2. Navega al directorio `Api`:
+2. Instala las dependencias:
 
 ```bash
 cd Api
 ```
 
-3. Instala las dependencias:
+3. Instala las dependencias de desarrollo:
 
 ```bash
+npm init -y
 npm install
+npm install express mongoose cors dotenv
+npm install -D nodemon
 ```
 
 4. Configura las variables de entorno creando un archivo `.env` en el directorio `Api` con el siguiente contenido:
@@ -31,7 +48,19 @@ EMAILJS_PUBLIC_KEY=tu_public_key
 EMAILJS_FROM_NAME=Sistema de Recuperación
 ```
 
-5. Inicia el servidor:
+- Reemplaza `<usuario>`, `<contraseña>`, `<cluster>` y `<base_de_datos>` con los valores correspondientes de tu base de datos MongoDB.
+- Reemplaza `tu_secreto_jwt` con una clave secreta para los tokens JWT.
+- Configura los valores de EmailJS con tus credenciales.
+
+## Iniciar el servidor
+
+1. Inicia el servidor en modo desarrollo:
+
+```bash
+npm run dev
+```
+
+2. O inicia el servidor en modo producción:
 
 ```bash
 npm start

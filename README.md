@@ -6,6 +6,7 @@ Este proyecto es una plataforma de gestión de biblioteca digital, compuesta por
 - [Características](#características)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Instalación](#instalación)
+- [Crear el Proyecto desde Cero](#crear-el-proyecto-desde-cero)
 - [Uso](#uso)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 - [Dependencias Instaladas y Propósito](#dependencias-instaladas-y-propósito)
@@ -42,23 +43,161 @@ cd Proyecto_Six
 
 ### 2. Configurar el Backend (Api)
 
+1. Navega al directorio `Api`:
+
 ```bash
 cd Api
-npm install
-# Configura las variables de entorno en un archivo .env
-npm start
 ```
-El backend corre por defecto en `http://localhost:5000`.
+
+2. Instala las dependencias:
+
+```bash
+npm install
+```
+
+3. Configura las variables de entorno creando un archivo `.env` con el siguiente contenido:
+
+```env
+PORT=5000
+MONGO_URI=mongodb+srv://<usuario>:<contraseña>@<cluster>.mongodb.net/<base_de_datos>
+JWT_SECRET=tu_secreto_jwt
+EMAILJS_SERVICE_ID=tu_service_id
+EMAILJS_TEMPLATE_ID=tu_template_id
+EMAILJS_PUBLIC_KEY=tu_public_key
+```
+
+4. Inicia el servidor:
+
+```bash
+npm run dev
+```
+
+El backend estará disponible en `http://localhost:5000`.
 
 ### 3. Configurar el Frontend (Biblioteca)
 
+1. Navega al directorio `Biblioteca`:
+
 ```bash
 cd ../Biblioteca
+```
+
+2. Instala las dependencias:
+
+```bash
 npm install
-# Configura las variables de entorno en un archivo .env
+```
+
+3. Configura las variables de entorno creando un archivo `.env` con el siguiente contenido:
+
+```env
+VITE_API_URL=http://localhost:5000
+VITE_EMAILJS_SERVICE_ID=tu_service_id
+VITE_EMAILJS_TEMPLATE_ID=tu_template_id
+VITE_EMAILJS_PUBLIC_KEY=tu_public_key
+```
+
+4. Inicia el servidor de desarrollo:
+
+```bash
 npm run dev
 ```
-El frontend corre por defecto en `http://localhost:5173`.
+
+El frontend estará disponible en `http://localhost:5173`.
+
+## Crear el Proyecto desde Cero
+
+Si deseas crear este proyecto desde cero, sigue estos pasos:
+
+### 1. Configurar el Backend (Api)
+
+1. Crea una carpeta para el backend y navega a ella:
+
+```bash
+mkdir Api
+cd Api
+```
+
+2. Inicializa un proyecto de Node.js:
+
+```bash
+npm init -y
+```
+
+3. Instala las dependencias necesarias:
+
+```bash
+npm install express mongoose cors dotenv bcryptjs jsonwebtoken nodemailer
+npm install -D nodemon
+```
+
+4. Crea la estructura de carpetas:
+
+```
+Api/
+├── src/
+│   ├── config/
+│   ├── middleware/
+│   ├── models/
+│   └── routes/
+├── .env
+├── package.json
+└── server.js
+```
+
+5. Configura el archivo `server.js` para inicializar el servidor y conectar a MongoDB.
+
+6. Crea las rutas, modelos y controladores necesarios para la API.
+
+### 2. Configurar el Frontend (Biblioteca)
+
+1. Crea una carpeta para el frontend y navega a ella:
+
+```bash
+mkdir Biblioteca
+cd Biblioteca
+```
+
+2. Inicializa un proyecto de Vite:
+
+```bash
+npm create vite@latest . -- --template react
+```
+
+3. Instala las dependencias necesarias:
+
+```bash
+npm install react-router-dom bootstrap @emailjs/browser
+npm install -D eslint @vitejs/plugin-react
+```
+
+4. Crea la estructura de carpetas:
+
+```
+Biblioteca/
+├── public/
+├── src/
+│   ├── api/
+│   ├── components/
+│   ├── context/
+│   ├── hooks/
+│   ├── pages/
+│   ├── routes/
+│   └── utils/
+├── .env
+├── package.json
+└── vite.config.js
+```
+
+5. Configura el archivo `vite.config.js` y las rutas en `src/routes`.
+
+6. Desarrolla los componentes y páginas necesarios para la aplicación.
+
+### 3. Configurar los Archivos `.env`
+
+Asegúrate de crear los archivos `.env` tanto en el backend como en el frontend con las variables necesarias para conectar con la base de datos y servicios externos.
+
+---
 
 ## Uso
 
@@ -84,6 +223,7 @@ El frontend corre por defecto en `http://localhost:5173`.
 - **bcryptjs**: Encriptación de contraseñas.
 - **dotenv**: Manejo de variables de entorno.
 - **cors**: Habilitar solicitudes entre dominios.
+- **nodemailer**: Envío de correos electrónicos desde el servidor.
 - **nodemon**: Reinicio automático del servidor en desarrollo.
 
 ### Frontend (Biblioteca)
@@ -91,6 +231,8 @@ El frontend corre por defecto en `http://localhost:5173`.
 - **react-router-dom**: Manejo de rutas en la aplicación.
 - **vite**: Herramienta de desarrollo rápida para React.
 - **eslint**: Herramienta para mantener un código limpio y consistente.
+- **bootstrap**: Framework CSS para diseño responsivo.
+- **@emailjs/browser**: Envío de correos electrónicos desde el navegador.
 
 ## Configuración de Archivos .env
 
@@ -115,9 +257,9 @@ EMAILJS_PUBLIC_KEY=tu_public_key
 
 ```env
 VITE_API_URL=http://localhost:5000
-VITE_EMAILJS_SERVICE_ID=tu_service_id_de_emailjs
-VITE_EMAILJS_TEMPLATE_ID=tu_template_id_de_emailjs
-VITE_EMAILJS_PUBLIC_KEY=tu_public_key_de_emailjs
+VITE_EMAILJS_SERVICE_ID=tu_service_id
+VITE_EMAILJS_TEMPLATE_ID=tu_template_id
+VITE_EMAILJS_PUBLIC_KEY=tu_public_key
 ```
 
 ---
