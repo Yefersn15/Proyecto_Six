@@ -9,6 +9,7 @@ Este proyecto es una plataforma de gestión de biblioteca digital, compuesta por
 - [Uso](#uso)
 - [Tecnologías Utilizadas](#tecnologías-utilizadas)
 - [Dependencias Instaladas y Propósito](#dependencias-instaladas-y-propósito)
+- [Configuración de Archivos .env](#configuración-de-archivos-env)
 - [Autores](#autores)
 
 ---
@@ -161,8 +162,40 @@ El frontend corre por defecto en `http://localhost:5173`.
 - **axios**: Cliente HTTP para realizar solicitudes a la API.
 - **eslint**: Herramienta para mantener un código limpio y consistente.
 
+## Configuración de Archivos .env
+
+Para que el proyecto funcione correctamente, es necesario crear archivos `.env` tanto para el backend como para el frontend. A continuación, se describen los pasos:
+
+### Backend (Api)
+1. En la carpeta `Api/`, crea un archivo llamado `.env`.
+2. Agrega las siguientes variables de entorno:
+
+```env
+PORT=5000
+MONGO_URI=mongodb+srv://<usuario>:<contraseña>@<cluster>.mongodb.net/<base_de_datos>
+JWT_SECRET=tu_secreto_jwt
+EMAILJS_SERVICE_ID=tu_service_id
+EMAILJS_TEMPLATE_ID=tu_template_id
+EMAILJS_PUBLIC_KEY=tu_public_key
+```
+
+- **PORT**: Puerto en el que correrá el servidor.
+- **MONGO_URI**: URI de conexión a tu base de datos MongoDB.
+- **JWT_SECRET**: Clave secreta para firmar los tokens JWT.
+- **EMAILJS_SERVICE_ID**, **EMAILJS_TEMPLATE_ID**, **EMAILJS_PUBLIC_KEY**: Credenciales para el servicio de envío de correos (opcional).
+
+### Frontend (Biblioteca)
+1. En la carpeta `Biblioteca/`, crea un archivo llamado `.env`.
+2. Agrega las siguientes variables de entorno:
+
+```env
+VITE_API_URL=http://localhost:5000
+```
+
+- **VITE_API_URL**: URL base para las solicitudes a la API del backend.
+
 ---
-Estas dependencias son esenciales para el correcto funcionamiento del proyecto. Si necesitas instalar nuevas dependencias, asegúrate de incluirlas en el archivo `package.json` correspondiente.
+Asegúrate de no incluir estos archivos en el repositorio añadiéndolos al archivo `.gitignore`. Esto protege tu información sensible.
 
 ## Autores
 
