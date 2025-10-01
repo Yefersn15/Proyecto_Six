@@ -10,7 +10,7 @@ import { ThemeProvider } from "./components/ThemeContext"; // Importa el ThemePr
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/Proyecto_Six/">
       <AuthProvider>
         <ThemeProvider>
           <App />
