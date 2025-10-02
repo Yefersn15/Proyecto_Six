@@ -256,7 +256,6 @@ EMAILJS_PUBLIC_KEY=tu_public_key
 2. Agrega las siguientes variables de entorno:
 
 ```env
-VITE_API_URL=http://localhost:5000
 VITE_EMAILJS_SERVICE_ID=tu_service_id
 VITE_EMAILJS_TEMPLATE_ID=tu_template_id
 VITE_EMAILJS_PUBLIC_KEY=tu_public_key
